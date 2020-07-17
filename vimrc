@@ -1,12 +1,20 @@
+"Using vim-plug as the plugin manager
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
+" Need this until we get rid of CoffeeScript.
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 call plug#end()
 
+runtime macros/matchit.vim
+
+"Line Numbers
 set nu
-set clipboard=unnamed
+
+"Copy/Paste to the System clipboard
+set clipboard^=unnamed,unnamedplus
 
 set tabstop=2 expandtab shiftwidth=2 smarttab
 set textwidth=120
@@ -21,5 +29,8 @@ let mapleader=","
 
 nnoremap <leader>b :e #<cr>
 
+" highlight extrawhitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
-2match ExtraWhitespace /\s\+$/
+match ExtraWhitespace /\s\+$/
+
+colorscheme wombat256
