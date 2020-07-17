@@ -4,6 +4,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
 " Need this until we get rid of CoffeeScript.
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 call plug#end()
