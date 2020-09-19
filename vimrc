@@ -7,12 +7,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 " Need this until we get rid of CoffeeScript.
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'jremmen/vim-ripgrep'
 call plug#end()
 
 runtime macros/matchit.vim
 
 "Line Numbers
-set nu
+set rnu
+set laststatus=2
 
 "Copy/Paste to the System clipboard
 set clipboard^=unnamed,unnamedplus
