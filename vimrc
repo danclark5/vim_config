@@ -5,6 +5,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
 " Need this until we get rid of CoffeeScript.
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'jremmen/vim-ripgrep'
@@ -20,20 +21,21 @@ set laststatus=2
 set clipboard^=unnamed,unnamedplus
 
 set tabstop=2 expandtab shiftwidth=2 smarttab
-set textwidth=120
+set textwidth=80
 set autoindent
 set showmatch
 syntax on
 set hlsearch
 set incsearch
 set backspace=indent,eol,start
+set ruler
 
 let mapleader=","
 
 nnoremap <leader>b :e #<cr>
 
 " highlight extrawhitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 colorscheme wombat256
+
+match ExtraWhitespace /\s\+$/
